@@ -23,10 +23,6 @@ actlistbox=lightgray,gray
 actsellistbox=black,green
 '
 
-# === VARIABLE ===
-
-python_ver="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[0:2])))')"
-
 # === FUNCTIONS ===
 
 function noOS_Support() {
@@ -218,6 +214,7 @@ fi
 
 
 function Install_Termsteel() {
+python_ver="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[0:2])))')"
 
 termsteel --version &>/dev/null
 if [ $? -eq 0 ]; then
