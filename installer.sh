@@ -301,7 +301,7 @@ else
             "sudo pip install zipp==3.8.0 --no-dependencies --upgrade --force-reinstall &>/dev/null"
             "sleep 0.5"
             "cd /tmp &>/dev/null"
-            "sudo wget https://github.com/afi-dev/Termsteel/raw/main/termsteel_v0.0.1.tar.gz &>/dev/null"
+            "sudo wget https://github.com/afi-dev/Termsteel/releases/download/v0.0.1/termsteel_v0.0.1.tar.gz &>/dev/null"
             "sudo tar -xvf termsteel_v0.0.1.tar.gz"
             "cd termsteel_v0.0.1"
             "sudo python3 setup.py install &>/dev/null"
