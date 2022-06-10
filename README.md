@@ -1,6 +1,7 @@
 # Termsteel
 
-![termsteel_logo.png](https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_logo.png)
+
+<p align="center"><img src="https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_logo.png" style="max-width: 100%;"></p>
 
 <p align="center"><strong>Termsteel is a versatile and sleek web terminal built in python and accessible from a web browser to interact without complexity with the terminal on your machine inspired on <a href="https://github.com/cs01/pyxtermjs">Pyxtermjs</a>.</strong></p>
 
