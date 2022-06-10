@@ -342,10 +342,10 @@ if command -v termsteel &> /dev/null; then
     if [ $? -eq 0 ]; then
     All_done
     else
-    whiptail --msgbox --title "Termsteel installer encountered an error during the installation and did not correctly install termsteel, tried to restart an installation, if the problem persists send an issue on github." 15 50
+    whiptail --msgbox --title "Error" "Termsteel installer encountered an error during the installation and did not correctly install termsteel, tried to restart an installation, if the problem persists send an issue on github." 15 50
     fi
 else
-    whiptail --msgbox --title "Termsteel installer encountered an error during the installation and did not correctly install termsteel, tried to restart an installation, if the problem persists send an issue on github." 15 50
+    whiptail --msgbox --title "Error" "Termsteel installer encountered an error during the installation and did not correctly install termsteel, tried to restart an installation, if the problem persists send an issue on github." 15 50
     exit
 fi
 
