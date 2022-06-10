@@ -24,7 +24,7 @@
 
 - You will need python `3.0` or `higher`
 
-## Easy install
+## Easy install (Currently broken)
 
 To start using and installing Termsteel type the command:
 
@@ -33,7 +33,7 @@ pip install termsteel
 ```
 See the [Pipy](https://pypi.org/project/termsteel/) page for more details
 
-## Alternative Install Methods (Recommanded)
+## Alternative Install Methods (Highly recommend)
 
 ### Method 1: Curl the installer script (Recommanded)
 
