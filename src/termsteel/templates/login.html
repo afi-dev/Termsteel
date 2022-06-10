@@ -1,0 +1,83 @@
+<html>
+<!--
+                    .::::::.
+                .::^^::::::^^:..
+             .:^^:::::....:::::^::.
+         .::^^::::....::::....::::^^::.
+        :^^:::....::::::::::::....:::^^:
+       ^^::...::::::..::::::::::::...::^^
+      :^::.:::::::..^:.::::::::::::::.::^:
+      :^::.::::...^YY:.::::::::::::::.::^:
+      :^::.:::.:~5&&!^:.:::::::::::::.::^:
+      :^::.:::.^J5@@#J:..........::::.::^:
+      :^::.::::..J#J^..:~!!!!!!!^.:::.::^:
+      :^::.::::.^7:..:.:PGGGGGGG7.:::.::^:
+      :^::.::::::..::::..........::::.::^:
+       ^^::...::::::::::.........:...::^^
+        :^^:::....::::::::::::....:::^^:
+         .::^^::::....::::....::::^^::.
+             .:^^^::::....::::^^^:.
+                .::^^^::::^^^:..
+                    .::::::.
+
+               Termsteel V.0.0.1
+
+-->
+<head>
+	<title>Termsteel V{{version}}</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="author" content="Afi" />
+    <meta name="copyright" content="© 2022 Termsteel" />
+    <meta name="title" content="Termsteel">
+    <meta name="description" content="Termsteel is a versatile and sleek web terminal built in python and accessible from a web browser to interact without complexity with the terminal on your machine inspired on Pyxtermjs.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Termsteel">
+    <meta property="og:description" content="Termsteel is a versatile and sleek web terminal built in python and accessible from a web browser to interact without complexity with the terminal on your machine inspired on Pyxtermjs.">
+    <meta property="og:image" content="../static/assets/banner.png">
+	<link rel="icon" type="image/x-icon" href="../static/assets/logo.svg">
+	<link href="../static/css/static.css" rel="stylesheet">
+</head>
+<body class="termsteel-bg-steel-300 termsteel-group termstee-select-none">
+	<div style="background-image: url('../static/wallpapers/the_street.gif')" class="termsteel-bg-cover termsteel-bg-steel-300 termsteel-bg-opacity-80 termsteel-relative termsteel-flex termsteel-flex-col termsteel-items-center termsteel-overflow-hidden termsteel-h-screen termsteel-justify-center termsteel-items-center">
+		<div class="termsteel-relative termsteel-z-[1] termsteel-container">
+			<div class="termsteel-mx-auto termsteel-transition termsteel-duration-500 termsteel-group-hover:scale-115 lg:termsteel-group-hover:scale-110 termsteel-rounded-2xl termsteel-bg-steel-300 termsteel-bg-opacity-70 termsteel-shadow-xl termsteel-max-w-sm">
+				<div class="termsteel-relative termsteel-p-10 termsteel-space-y-2">
+					<div class="termsteel-flex termsteel-justify-center termsteel-text-white termsteel-mx-auto termsteel-mb-8"> <img src="../static/assets/logo.png" loading="lazy" class="termsteel-w-12 termsteel-h-12 termsteel-mr-2" alt="Termsteel Logo">
+						<h1 class="termsteel-text-xl termsteel-bg-clip-text termsteel-text-white termsteel-font-semibold termsteel-my-auto">Termsteel</h1> </div>
+					<form action="" method="post">
+						<input autocomplete="off" id="username" name="username" type="text" pattern="(?=^.{1,}$).*$" required class="termsteel-mb-4 termsteel-bg-steel-300 termsteel-bg-opacity-50 termsteel-w-full termsteel-h-12 termsteel-pl-6 termsteel-pr-12 termsteel-border-2 termsteel-border-transparent termsteel-rounded-xl termsteel-transition termsteel-duration-300 hover:termsteel-border-steel-100 focus:termsteel-border-steel-100 focus:termsteel-bg-steel-300 active:termsteel-bg-steel-300 focus:termsteel-outline-none termsteel-text-white termsteel-font-medium termsteel-text-xs">
+						<div @click="open=true" @click.away="open=false" @mouseover="open=true" @mouseover.away="open=false" class="relative" x-data="{input: 'password', open: false}">
+							<input autocomplete="off" id="password" name="pw" type="password" x-bind:type="input" pattern="(?=^.{1,}$).*$" required class="termsteel-mb-4 termsteel-bg-steel-300 termsteel-bg-opacity-50 termsteel-w-full termsteel-group termsteel-h-12 termsteel-pl-6 termsteel-pr-12 termsteel-border-2 termsteel-border-transparent termsteel-rounded-xl termsteel-transition termsteel-duration-300 hover:termsteel-border-steel-100 focus:termsteel-border-steel-100 focus:termsteel-bg-steel-300 active:termsteel-bg-steel-300 focus:termsteel-outline-none termsteel-text-white termsteel-font-medium termsteel-text-xs">
+							<a x-show="open" class="termsteel-hidden group-hover:termsteel-block hover:termsteel-cursor-pointer termsteel-absolute termsteel-right-[1rem] termsteel-top-[0.9rem]" x-on:click="input=(input==='password') ? 'text' : 'password'" x-html="input=='password' ? '<svg xmlns='http://www.w3.org/2000/svg' class='termsteel-text-steel-100 termsteel-fill-steel-100 termsteel-h-5 termsteel-w-5 termsteel-my-auto' viewBox='0 0 512 512'><circle cx='256' cy='256' r='64'/><path d='M490.84 238.6c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.66 96c-42.52 0-84.33 12.15-124.27 36.11-40.73 24.43-77.63 60.12-109.68 106.07a31.92 31.92 0 00-.64 35.54c26.41 41.33 60.4 76.14 98.28 100.65C162 402 207.9 416 255.66 416c46.71 0 93.81-14.43 136.2-41.72 38.46-24.77 72.72-59.66 99.08-100.92a32.2 32.2 0 00-.1-34.76zM256 352a96 96 0 1196-96 96.11 96.11 0 01-96 96z'/></svg>' : '<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='termsteel-text-steel-100 termsteel-fill-steel-100 termsteel-h-5 termsteel-w-5 termsteel-my-auto'><path d='M432 448a15.92 15.92 0 01-11.31-4.69l-352-352a16 16 0 0122.62-22.62l352 352A16 16 0 01432 448zM248 315.85l-51.79-51.79a2 2 0 00-3.39 1.69 64.11 64.11 0 0053.49 53.49 2 2 0 001.69-3.39zM264 196.15L315.87 248a2 2 0 003.4-1.69 64.13 64.13 0 00-53.55-53.55 2 2 0 00-1.72 3.39z'/><path d='M491 273.36a32.2 32.2 0 00-.1-34.76c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.68 96a226.54 226.54 0 00-71.82 11.79 4 4 0 00-1.56 6.63l47.24 47.24a4 4 0 003.82 1.05 96 96 0 01116 116 4 4 0 001.05 3.81l67.95 68a4 4 0 005.4.24 343.81 343.81 0 0067.24-77.4zM256 352a96 96 0 01-93.3-118.63 4 4 0 00-1.05-3.81l-66.84-66.87a4 4 0 00-5.41-.23c-24.39 20.81-47 46.13-67.67 75.72a31.92 31.92 0 00-.64 35.54c26.41 41.33 60.39 76.14 98.28 100.65C162.06 402 207.92 416 255.68 416a238.22 238.22 0 0072.64-11.55 4 4 0 001.61-6.64l-47.47-47.46a4 4 0 00-3.81-1.05A96 96 0 01256 352z'/></svg>'">
+								<svg xmlns="http://www.w3.org/2000/svg" class="text-steel-100 fill-steel-100 h-5 w-5 my-auto" viewBox="0 0 512 512">
+									<circle cx="256" cy="256" r="64" />
+									<path d="M490.84 238.6c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.66 96c-42.52 0-84.33 12.15-124.27 36.11-40.73 24.43-77.63 60.12-109.68 106.07a31.92 31.92 0 00-.64 35.54c26.41 41.33 60.4 76.14 98.28 100.65C162 402 207.9 416 255.66 416c46.71 0 93.81-14.43 136.2-41.72 38.46-24.77 72.72-59.66 99.08-100.92a32.2 32.2 0 00-.1-34.76zM256 352a96 96 0 1196-96 96.11 96.11 0 01-96 96z" />
+								</svg>
+							</a>
+						</div>
+						<button class="termsteel-bg-steel-300 termsteel-bg-opacity-50 termsteel-w-full termsteel-group termsteel-h-12 termsteel-px-6 termsteel-border-2 termsteel-border-transparent termsteel-rounded-xl termsteel-transition termsteel-duration-300 hover:termsteel-border-steel-100 focus:termsteel-border-steel-100 focus:termsteel-bg-steel-300 active:termsteel-bg-steel-300 focus:termsteel-outline-none termsteel-text-white termsteel-font-medium termsteel-text-xs">
+							<div class="termsteel-relative termsteel-flex termsteel-items-center termsteel-space-x-4 termsteel-justify-center"> <span class="termsteel-block termsteel-w-max termsteel-font-semibold termsteel-tracking-wide">Login</span> </div>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="termsteel-flex termsteel-z-10 termsteel-justify-center termsteel-space-x-4 termsteel-mt-12">
+			<a class="termsteel-fill-white termsteel-text-white termsteel-flex termsteel-transition termsteel-duration-500 termsteel-text-sm termsteel-my-auto termsteel-items-center termsteel-text-xs termsteel-font-medium hover:termsteel-underline">
+				<svg xmlns="http://www.w3.org/2000/svg" class="termsteel-h-4 termsteel-w-4 termsteel-mr-1" viewBox="0 0 512 512">
+					<path xmlns="http://www.w3.org/2000/svg" d="M416 160a64 64 0 10-96.27 55.24c-2.29 29.08-20.08 37-75 48.42-17.76 3.68-35.93 7.45-52.71 13.93v-126.2a64 64 0 10-64 0v209.22a64 64 0 1064.42.24c2.39-18 16-24.33 65.26-34.52 27.43-5.67 55.78-11.54 79.78-26.95 29-18.58 44.53-46.78 46.36-83.89A64 64 0 00416 160zM160 64a32 32 0 11-32 32 32 32 0 0132-32zm0 384a32 32 0 1132-32 32 32 0 01-32 32zm192-256a32 32 0 1132-32 32 32 0 01-32 32z" />
+				</svg> <span>V0.0.1</span> </a>
+			<a target="_blank" href="https://github.com/afi-dev/Termsteel" class="termsteel-fill-white termsteel-text-white termsteel-flex termsteel-transition termsteel-duration-500 termsteel-text-sm termsteel-my-auto termsteel-items-center termsteel-text-xs termsteel-font-medium hover:termsteel-underline">
+				<svg xmlns="http://www.w3.org/2000/svg" class="termsteel-h-4 termsteel-w-4 termsteel-mr-1" viewBox="0 0 512 512">
+					<path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
+				</svg> <span>Termsteel</span> </a>
+		</div>
+		<div aria-hidden="true" class="termsteel-absolute termsteel-h-full termsteel-inset-0 termsteel-flex termsteel-items-center">
+			<div aria-hidden="true" class="termsteel-bg-layers termsteel-bg-scale termsteel-w-56 termsteel-h-56 termsteel-m-auto termsteel-blur-xl termsteel-bg-gradient-to-r termsteel-from-steel-200 termsteel-to-steel-100 termsteel-rounded-full termsteel-w-[30rem] termsteel-h-[30rem] termsteel-blur-3xl"></div>
+		</div>
+		<div aria-hidden="true" class="termsteel-absolute termsteel-inset-0 termsteel-w-full termsteel-h-full termsteel-opacity-90"></div>
+	</div>
+</body>
+<script src="../static/js/alpine.min.js"></script>
+</html>

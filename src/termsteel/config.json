@@ -1,0 +1,11 @@
+{
+   "version": "0.0.1",
+   "username": "test",
+   "password": ".",
+   "reset": true,
+   "key": "",
+   "token_name": "token",
+   "token_protection": true,
+   "token_session": true,
+   "max_decode_packets": 1024
+}
