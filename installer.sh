@@ -70,7 +70,8 @@ if [[ "$Python_Installed" == 'yes' ]]; then
     Wget_check
 else
     if whiptail --yesno "Termsteel detects that Python3 is not installed on your machine, but this is necessary in the installation of termsteel.\n\nDo you want Termsteel installer install Python 3 for you ?" 15 50; then
-    apt-get install python3 &>/dev/null && Python_check &
+    apt-get install python3 &>/dev/null
+    Python_check
     else
     exit 1
     fi
@@ -85,7 +86,8 @@ if [[ "$Wget_Installed" == 'yes' ]]; then
     Fastjar_check
 else
     if whiptail --yesno "Termsteel detects that Wget is not installed on your machine, but this is necessary in the installation of termsteel.\n\nDo you want Termsteel installer install Wget for you ?" 15 50; then
-    apt-get install wget &>/dev/null && Wget_check &
+    apt-get install wget &>/dev/null
+    Wget_check
     fi
 fi
 
