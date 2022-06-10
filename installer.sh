@@ -70,7 +70,8 @@ if [[ "$Python_Installed" == 'yes' ]]; then
     Wget_check
 else
     if whiptail --yesno "Termsteel detects that Python3 is not installed on your machine, but this is necessary in the installation of termsteel.\n\nDo you want Termsteel installer install Python 3 for you ?" 15 50; then
-    apt-get install python3 &>/dev/null
+    sudo apt-get install python3 &>/dev/null
+    sudo apt install python3-pip &>/dev/null
     Python_check
     else
     exit 1
