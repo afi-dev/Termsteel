@@ -19,7 +19,7 @@
 
 ## Pre-installation Note
 
-- Termsteel only works on some one **Linux distributions** & **MacOS** for the moment. **Windows and some linux distributions** that do not support the [pty](https://docs.python.org/3/library/pty.html) (pseudo-terminal manipulation tools), [termios](https://docs.python.org/3/library/termios.html) and [fcntl](http://manpages.ubuntu.com/manpages/bionic/man2/fcntl.2.html) will not be able to run Termsteel.
+- Termsteel only works on some one **Linux distributions** & **~~MacOS~~** for the moment. **Windows and some linux distributions** that do not support the [pty](https://docs.python.org/3/library/pty.html) (pseudo-terminal manipulation tools), [termios](https://docs.python.org/3/library/termios.html) and [fcntl](http://manpages.ubuntu.com/manpages/bionic/man2/fcntl.2.html) will not be able to run Termsteel.
 
 - Termsteel requires a minimum of **`1GB`** of RAM to function properly.
 
