@@ -13,56 +13,46 @@ fi
 
 }
 
+function Troubleshooting() {
+
+echo "Troubleshooting"
+
+}
+
 function Menu() {
 
-computerName=$(scutil --get ComputerName)
-
-newName=$(osascript >/dev/null <<End
-    display dialog "Enter Computer Name" default answer "$computerName"
-    return text returned of result
+MenuItems=$(osascript 2>&1 <<End
+    set tlist to {"Install Termsteel", "Troubleshooting", "Exit"}
+    set titem to choose from list tlist with prompt "Termsteel Installer V0.4Beta" default items {"Install Termsteel"}
+    titem
 End
 )
 
-echo "New name: $newName"
+echo "Selected: $MenuItems"
+
+if [[ "$MenuItems" == 'Install Termsteel' ]]; then
+    MIT
+elif [[ "$MenuItems" == 'Troubleshooting' ]]; then
+    Troubleshooting
+elif [[ "$MenuItems" == 'Exit' ]]; then
+    exit 1
+else
+    exit 1
+fi
 
 }
 
 function MIT() {
-echo """
 
-=============== LICENSING ================
-"""
-
-curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LICENSE
-
-
-echo """
-
-[!] To install termsteel you must absolutely accept this license. Wishing you to accept the agreements subscribed in the terms ?
-"""
-
+Mit_Licensing=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LICENSE
+osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'"'
 
 }
 
 function Eula() {
-echo """
 
-============ EULA AGREEMENTS =============
-"""
-
-curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/EULA
-
-echo """
-
-[!] To install termsteel you must absolutely accept these EULA agreements. Wishing you to accept the agreements subscribed in the terms ?
-"""
-
-
-}
-
-function Troubleshooting() {
-
-echo "ss"
+Eula_Agreements=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/EULA
+osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Eula_Agreements//\"/}"'"'
 
 }
 
