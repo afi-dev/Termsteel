@@ -28,8 +28,6 @@ MenuItems=$(osascript 2>&1 <<End
 End
 )
 
-echo "Selected: $MenuItems"
-
 if [[ "$MenuItems" == 'Install Termsteel' ]]; then
     MIT
 elif [[ "$MenuItems" == 'Troubleshooting' ]]; then
@@ -44,17 +42,68 @@ fi
 
 function MIT() {
 
-Mit_Licensing=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LICENSE)
+Mit_Licensing=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LICENSE >/dev/null)
 
-osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'" '
+State_Mit_Licensing=$(osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'" buttons {"Reject","Agree"}' 2>&1)
+
+if [[ "$State_Mit_Licensing" == 'Agree' ]]; then
+    Eula
+elif [[ "$State_Mit_Licensing" == 'Reject' ]]; then
+    Menu
+else
+    Menu
+fi
 
 }
 
 function Eula() {
 
-Eula_Agreements=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/EULA)
-osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Eula_Agreements//\"/}"'" '
+Eula_Agreements=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/EULA >/dev/null)
+osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Eula_Agreements//\"/}"'" buttons {"Reject","Agree"}' 2>&1
 
+State_Eula_Agreements=$(osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'" buttons {"Reject","Agree"}' 2>&1)
+
+if [[ "$State_Eula_Agreements" == 'Agree' ]]; then
+    Install
+elif [[ "$State_Eula_Agreements" == 'Reject' ]]; then
+    Menu
+else
+    Menu
+fi
+
+}
+
+function Install {
+osascript >/dev/null <<'END'
+set theImages to choose file with prompt "Please select some images to process:" of type {"public.image"} with multiple selections allowed
+ 
+-- Update the initial progress information
+set theImageCount to length of theImages
+set progress total steps to theImageCount
+set progress completed steps to 0
+set progress description to "Processing Images..."
+set progress additional description to "Preparing to process."
+ 
+repeat with a from 1 to length of theImages
+ 
+    -- Update the progress detail
+    set progress additional description to "Processing image " & a & " of " & theImageCount
+ 
+    -- Process the image
+ 
+    -- Increment the progress
+    set progress completed steps to a
+ 
+    -- Pause for demonstration purposes, so progress can be seen
+    delay 1
+end repeat
+ 
+-- Reset the progress information
+set progress total steps to 0
+set progress completed steps to 0
+set progress description to ""
+set progress additional description to ""
+END
 }
 
 echo """
