@@ -46,14 +46,14 @@ function MIT() {
 
 Mit_Licensing=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LICENSE)
 
-osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'"'
+osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'" '
 
 }
 
 function Eula() {
 
 Eula_Agreements=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/EULA)
-osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Eula_Agreements//\"/}"'"'
+osascript -e 'display alert "LICENSE AGREEMENTS" message "'"${Eula_Agreements//\"/}"'" '
 
 }
 
