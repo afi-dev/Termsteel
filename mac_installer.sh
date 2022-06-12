@@ -88,7 +88,7 @@ END
   fi
 fi
 
-type -P brewi >/dev/null 2>&1 && Brew_Installed=yes
+type -P brew >/dev/null 2>&1 && Brew_Installed=yes
 if [[ "$Brew_Installed" == 'yes' ]]; then
     Menu
 else
