@@ -1,3 +1,18 @@
+function Check_brew() {
+
+type -P brew >/dev/null 2>&1 && Brew_Installed=yes
+if [[ "$Brew_Installed" == 'yes' ]]; then
+    Menu
+else
+    osascript >/dev/null <<'END'
+    display dialog "Termsteel to notice that brew is not installed on your machine, please install brew before launching Termsteel Installer" with icon stop
+END
+echo "Error | Termsteel ended with a error because brew is not installed on system"
+exit 1
+fi
+
+}
+
 function Menu() {
 
 computerName=$(scutil --get ComputerName)
@@ -91,21 +106,12 @@ END
   fi
 fi
 
-type -P brew >/dev/null 2>&1 && Brew_Installed=yes
-if [[ "$Brew_Installed" == 'yes' ]]; then
-    Menu
-else
-    osascript >/dev/null <<'END'
-    display dialog "Termsteel to notice that brew is not installed on your machine, please install brew before launching Termsteel Installer" with icon stop
-END
-echo "Error | Termsteel ended with a error because brew is not installed on system"
-exit 1
-fi
-
 if [ $(id -u) = 0 ]; then
     osascript >/dev/null <<'END'
     display dialog "Please do not run this installer script with sudo" with icon stop
 END
    echo "Error | Termsteel ended with a error because the installer script was launched with administrator rights from sudo"
    exit 1
+else
+    Check_brew
 fi
