@@ -47,6 +47,7 @@ Mit_Licensing=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/LI
 State_Mit_Licensing=$(osascript 2>&1 <<End
     display alert "LICENSE AGREEMENTS" message "'"${Mit_Licensing//\"/}"'" buttons {"Reject","Agree"}
 End
+)
 
 if [[ "$State_Mit_Licensing" == 'Agree' ]]; then
     Eula
@@ -65,6 +66,7 @@ Eula_Agreements=$(curl https://raw.githubusercontent.com/afi-dev/Termsteel/main/
 State_Eula_Agreements=$(osascript 2>&1 <<End
     display alert "EULA AGREEMENTS" message "'"${Eula_Agreements//\"/}"'" buttons {"Reject","Agree"}
 End
+)
 
 if [[ "$State_Eula_Agreements" == 'Agree' ]]; then
     Install
