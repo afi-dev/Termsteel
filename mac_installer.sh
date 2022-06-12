@@ -76,14 +76,6 @@ echo """
 
 """
 
-if [ $(id -u) = 0 ]; then
-    osascript >/dev/null <<'END'
-    display dialog "Please do not run this installer script with sudo" with icon stop
-END
-   echo "Error | Termsteel ended with a error because the installer script was launched with administrator rights from sudo"
-   exit 1
-fi
-
 if [ -z ${BASH} ]; then
     osascript >/dev/null <<'END'
     display dialog "Please run this install script using the bash interpreter." with icon stop
@@ -108,4 +100,12 @@ else
 END
 echo "Error | Termsteel ended with a error because brew is not installed on system"
 exit 1
+fi
+
+if [ $(id -u) = 0 ]; then
+    osascript >/dev/null <<'END'
+    display dialog "Please do not run this installer script with sudo" with icon stop
+END
+   echo "Error | Termsteel ended with a error because the installer script was launched with administrator rights from sudo"
+   exit 1
 fi
