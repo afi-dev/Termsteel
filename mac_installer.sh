@@ -86,7 +86,7 @@ type -P brewi >/dev/null 2>&1 && Brew_Installed=yes
 if [[ "$Brew_Installed" == 'yes' ]]; then
     Menu
 else
-    osascript <<'END'
+    osascript >/dev/null <<'END'
     display dialog "Termsteel detects that Brew is not installed on your machine, but this is necessary in the installation of termsteel. Please install Brew before launching Termsteel installer"
-END &>/dev/null
+END
 fi
