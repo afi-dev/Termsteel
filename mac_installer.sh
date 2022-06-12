@@ -1,5 +1,6 @@
 function Menu() {
-echo "sss"
+
+newName=$(osascript -e "text returned of (display dialog \"Enter Computer Name\" default answer \"$computerName\")")
 }
 
 function MIT() {
@@ -66,18 +67,23 @@ echo """
 
 """
 
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Termsteel installer need sudo permission"
-    exit 1
+if [[ $EUID -ne 0 ]]; then
+    osascript >/dev/null <<'END'
+    display dialog "Please do not run this installer script with sudo" with icon stop
+END
+   exit 1
 fi
 
 if [ -z ${BASH} ]; then
-    whiptail --msgbox --title "Please run the script using the bash interpreter." "Termsteel installer need bash" 15 50
-    exit 1
+    osascript >/dev/null <<'END'
+    display dialog "Please run this install script using the bash interpreter." with icon stop
+END
 else
   bash_major_version=${BASH_VERSION:0:1}
   if [ ${bash_major_version} -lt 3 ]; then
-    echo "Please run the script using bash version 3 or greater"
+    osascript >/dev/null <<'END'
+    display dialog "Please run this install script with a newer version of bash" with icon stop
+END
     exit 1
   fi
 fi
@@ -87,6 +93,8 @@ if [[ "$Brew_Installed" == 'yes' ]]; then
     Menu
 else
     osascript >/dev/null <<'END'
-    display dialog "Termsteel detects that Brew is not installed on your machine, but this is necessary in the installation of termsteel. Please install Brew before launching Termsteel installer"
+    display dialog "Termsteel to notice that brew is not installed on your machine, please install brew before launching Termsteel Installer" with icon stop
 END
+exit 1
 fi
+
