@@ -76,11 +76,11 @@ echo """
 
 """
 
-if [[ $EUID -ne 0 ]]; then
+if [ $(id -u) = 0 ]; then
     osascript >/dev/null <<'END'
     display dialog "Please do not run this installer script with sudo" with icon stop
 END
-   echo "Error | Termsteel ended with a error because the installer script was launched with the administrator rights from sudo"
+   echo "Error | Termsteel ended with a error because the installer script was launched with administrator rights from sudo"
    exit 1
 fi
 
