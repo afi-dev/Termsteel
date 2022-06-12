@@ -1,6 +1,15 @@
 function Menu() {
 
-newName=$(osascript -e "text returned of (display dialog \"Enter Computer Name\" default answer \"$computerName\")")
+computerName=$(scutil --get ComputerName)
+
+newName=$(osascript >/dev/null <<End
+    display dialog "Enter Computer Name" default answer "$computerName"
+    return text returned of result
+End
+)
+
+echo "New name: $newName"
+
 }
 
 function MIT() {
@@ -71,6 +80,7 @@ if [[ $EUID -ne 0 ]]; then
     osascript >/dev/null <<'END'
     display dialog "Please do not run this installer script with sudo" with icon stop
 END
+   echo "Error | Termsteel ended with a error because the installer script was launched with the administrator rights from sudo"
    exit 1
 fi
 
@@ -84,6 +94,7 @@ else
     osascript >/dev/null <<'END'
     display dialog "Please run this install script with a newer version of bash" with icon stop
 END
+    echo "Error | Termsteel ended with a error because the script was not run with bash or the bash version used is too old"
     exit 1
   fi
 fi
@@ -95,6 +106,6 @@ else
     osascript >/dev/null <<'END'
     display dialog "Termsteel to notice that brew is not installed on your machine, please install brew before launching Termsteel Installer" with icon stop
 END
+echo "Error | Termsteel ended with a error because brew is not installed on system"
 exit 1
 fi
-
