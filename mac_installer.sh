@@ -87,6 +87,6 @@ if [[ "$Brew_Installed" == 'yes' ]]; then
     Menu
 else
     osascript <<'END'
-    display dialog "Termsteel detects that Brew is not installed on your machine, but this is necessary in the installation of termsteel. Please install Brew before launching Termsteel install"
-END
+    display dialog "Termsteel detects that Brew is not installed on your machine, but this is necessary in the installation of termsteel. Please install Brew before launching Termsteel installer"
+END &>/dev/null
 fi
