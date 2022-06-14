@@ -4,12 +4,6 @@
 #  * Released under the CC BY-NC-SA 3.0 Attribution-NonCommercial-ShareAlike 3.0 License.
 #  */
 
-# /*!
-#  * Termsteel V.0.0.1
-#  * (c) 2022 Afi
-#  * Released under the CC BY-NC-SA 3.0 Attribution-NonCommercial-ShareAlike 3.0 License.
-#  */
-
 print("""
 
                     .::::::.
