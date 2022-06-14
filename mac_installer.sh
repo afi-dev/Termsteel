@@ -1,4 +1,11 @@
 #!/bin/sh
+
+# /*!
+#  * Termsteel Installer V0.4BETA
+#  * (c) 2022 Afi
+#  * Released under the MIT License.
+#  */
+
 function Check_brew() {
 
 type -P brew >/dev/null 2>&1 && Brew_Installed=yes
