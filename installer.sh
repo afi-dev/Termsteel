@@ -1,3 +1,11 @@
+#!/bin/bash
+
+# /*!
+#  * Termsteel Installer V0.4BETA
+#  * (c) 2022 Afi
+#  * Released under the MIT License.
+#  */
+
 #EXPORT
 
 export NEWT_COLORS='
