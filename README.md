@@ -19,13 +19,13 @@
 
 ## Pre-installation Note
 
-- Termsteel only works on some one **Linux distributions** & **~~MacOS~~** for the moment. **Windows and some linux distributions** that do not support the [pty](https://docs.python.org/3/library/pty.html) (pseudo-terminal manipulation tools), [termios](https://docs.python.org/3/library/termios.html) and [fcntl](http://manpages.ubuntu.com/manpages/bionic/man2/fcntl.2.html) will not be able to run Termsteel.
+- Termsteel only works on MacOS, Windows (Only with WSL & WSL2), or some Linux distributions that support the [pty](https://docs.python.org/3/library/pty.html) (pseudo-terminal manipulation tools), [termios](https://docs.python.org/3/library/termios.html) and [fcntl](http://manpages.ubuntu.com/manpages/bionic/man2/fcntl.2.html) will be able to run Termsteel.
 
 - Termsteel requires a minimum of **`1GB`** of RAM to function properly.
 
 - You will need python `3.0` or `higher`
 
-## Easy install (Currently broken)
+## Easy install 
 
 To start using and installing Termsteel type the command:
 
@@ -36,16 +36,36 @@ See the [Pipy](https://pypi.org/project/termsteel/) page for more details
 
 ## Alternative Install Methods (Highly recommend)
 
-### Method 1: Curl the installer script (Recommanded)
+### Method 1: Curl the installer script
 
+If you are using **Linux** or **Windows via WSL** use this command :
 ```
 curl -sSL https://raw.githubusercontent.com/afi-dev/Termsteel/main/installer.sh | sudo bash
 ```
 
+If you are using **MacOS** use this command :
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/afi-dev/Termsteel/main/mac_installer.sh)"
+```
+
 ### Method 2: Manually download the installer script and run
 
+If you are using **Linux** or **Windows via WSL** use this command :
 ```
-wget https://raw.githubusercontent.com/afi-dev/Termsteel/main/installer.sh &>/dev/null | sudo bash installer.sh
+wget https://raw.githubusercontent.com/afi-dev/Termsteel/main/installer.sh | sudo bash installer.sh
+```
+
+If you are using **MacOS** use this command :
+```
+curl -o mac_installer.sh https://raw.githubusercontent.com/afi-dev/Termsteel/main/mac_installer.sh && bash mac_installer.sh
+```
+
+## Install for Developpement
+If you just want to install the development version repo and run Termsteel:
+
+```
+git clone https://github.com/afi-dev/Termsteel.git
+cd Termsteel && pip install -r requirements.txt && cd src && cd termsteel && python3 app.py
 ```
 
 ## Run termsteel
@@ -53,12 +73,6 @@ wget https://raw.githubusercontent.com/afi-dev/Termsteel/main/installer.sh &>/de
 If you installed from pip or from the install script use this :
 ```
 termsteel
-```
-
-Or if you have installed manually from git you can run directly with :
-
-```
-cd Termsteel && pip install -r requirements.txt && cd src && cd termsteel && python3 app.py
 ```
 
 ### Optional arguments you can use
