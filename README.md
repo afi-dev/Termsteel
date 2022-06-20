@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/44731817/174507182-ecfb696f-7dfd-4303-
 
 - You will need python `3.0` or `higher`
 
-- To know how to install Termsteel on other platform please refer to this [documentation page](https://github.com/afi-dev/Termsteel/wiki/Install-Termsteel)
+- To know how to install Termsteel in detail or on specific platform please refer to this [documentation page](https://github.com/afi-dev/Termsteel/wiki/Install-Termsteel)
 
 ## Easy install 
 
