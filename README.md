@@ -133,7 +133,7 @@ Termsteel is completely free and open-source, so feel free to participate in its
 
 ## License & Conditions
 
-- [Attribution-NonCommercial-ShareAlike 4.0 International](https://github.com/afi-dev/Termsteel/blob/main/LICENSE.md)
+- [MIT](https://github.com/afi-dev/Termsteel/blob/main/LICENSE)
 
 - [EULA](https://github.com/afi-dev/Termsteel/blob/main/EULA)
 
