@@ -15,6 +15,11 @@
 
 ![termsteel_cards.png](https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_cards.png)
 
+### Trailer : 
+
+https://user-images.githubusercontent.com/44731817/174507182-ecfb696f-7dfd-4303-aa69-247e97e89afe.mp4
+
+
 -----
 
 ## Pre-installation Note
