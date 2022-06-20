@@ -121,7 +121,7 @@ If you have lost your login credentials you can still reset Termsteel to the def
 termsteel --reset
 ``` 
 
-Or you have to modify [`config.json`](https://github.com/afi-dev/Termsteel/blob/main/config.json) and set `"reset"` to `true` then restart Termsteel.
+Or you have to modify [`config.json`](https://github.com/afi-dev/Termsteel/blob/main/src/termsteel/config.json) and set `"reset"` to `true` then restart Termsteel.
 
 ## Contributing
 
