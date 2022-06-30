@@ -103,6 +103,8 @@ optional arguments:
 
 ## Default credentials
 
+<p align="center"><img src="https://i.imgur.com/zs3tXc2.png" style="max-width: 100%;"></p>
+
 The default login credentials for accessing the dashbaord are:
 
 - username : **`Admin`**
