@@ -33,9 +33,11 @@ https://user-images.githubusercontent.com/44731817/179745407-9f9eedb1-ee34-42ab-
 
 - Termsteel requires a minimum of **`1GB`** of RAM to function properly.
 
-- You will need python `3.0` or `higher`
+- You will need python `3.0` or `higher` with `pip`
 
 - To know how to install Termsteel in detail or on specific platform please refer to this [documentation page](https://github.com/afi-dev/Termsteel/wiki/Install-Termsteel)
+
+- Do not use Termsteel as a public access environment to your machine, Termsteel is only a proof of concept and does not guarantee maximum security without a ssl certificate on a production environment
 
 ## Easy install 
 
