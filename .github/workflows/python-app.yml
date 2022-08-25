@@ -27,13 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install termsteel -y
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Uninstall PyJWT
-      run: |
-        pip uninstall PyJWT -y
-    - name: Uninstall PyJWT
-      run: |
-        pip install PyJWT==1.6.4 -y
+        if [ -f requirements.txt ]; then pip install -r requirements.txt --upgrade --force-reinstall; fi
     - name: Test 
       run: |
         termsteel
