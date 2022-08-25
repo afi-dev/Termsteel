@@ -35,7 +35,7 @@ jobs:
         pip install click==7.1.2 --no-dependencies --upgrade --force-reinstall --no-deps
         pip install Flask==1.0.2 --no-dependencies --upgrade --force-reinstall --no-deps
         pip install Flask-Argon2==0.2.0.0 --no-dependencies --upgrade --force-reinstall
-        pip install flask-jwt-login==0.0.5 --no-dependencies --upgrade --force-reinstall
+        pip install flask-jwt-login --no-dependencies --upgrade --force-reinstall
         pip install Flask-SocketIO==5.2.0 --no-dependencies --upgrade --force-reinstall
         pip install idna==3.3 --no-dependencies --upgrade --force-reinstall 
         pip install importlib-metadata==4.11.4 --no-dependencies --upgrade --force-reinstall
