@@ -26,8 +26,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install termsteel
+        pip install termsteel -y
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+    - name: Uninstall PyJWT
+      run: |
+        pip uninstall PyJWT -y
+    - name: Uninstall PyJWT
+      run: |
+        pip install PyJWT==1.6.4 -y
+    - name: Test 
       run: |
         termsteel
