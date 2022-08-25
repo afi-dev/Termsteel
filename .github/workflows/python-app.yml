@@ -26,8 +26,33 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install argon2-cffi==21.3.0 --no-dependencies --upgrade --force-reinstall
+        pip install argon2-cffi-bindings==21.2.0 --no-dependencies --upgrade --force-reinstall
+        pip install bidict==0.22.0 --no-dependencies --upgrade --force-reinstall
+        pip install certifi==2022.5.18.1 --no-dependencies --upgrade --force-reinstall
+        pip install cffi==1.15.0 --no-dependencies --upgrade --force-reinstall
+        pip install charset-normalizer==2.0.12 --no-dependencies --upgrade --force-reinstall
+        pip install click==7.1.2 --no-dependencies --upgrade --force-reinstall
+        pip install Flask==1.0.2 --no-dependencies --upgrade --force-reinstall
+        pip install Flask-Argon2==0.2.0.0 --no-dependencies --upgrade --force-reinstall
+        pip install flask-jwt-login==0.0.5 --no-dependencies --upgrade --force-reinstall
+        pip install Flask-SocketIO==5.2.0 --no-dependencies --upgrade --force-reinstall
+        pip install idna==3.3 --no-dependencies --upgrade --force-reinstall &>/dev/null"
+        pip install importlib-metadata==4.11.4 --no-dependencies --upgrade --force-reinstall
+        pip install itsdangerous==1.1.0 --no-dependencies --upgrade --force-reinstall
+        pip install Jinja2==2.11.3 --no-dependencies --upgrade --force-reinstall
+        pip install markup==0.2 --no-dependencies --upgrade --force-reinstall
+        pip install MarkupSafe==2.0.1 --no-dependencies --upgrade --force-reinstall
+        pip install pycparser==2.21 --no-dependencies --upgrade --force-reinstall
+        pip install PyJWT==1.6.4 --no-dependencies --upgrade --force-reinstall
+        pip install python-engineio==4.2.1 --no-dependencies --upgrade --force-reinstall
+        pip install python-socketio==5.4.0 --no-dependencies --upgrade --force-reinstall
+        pip install requests==2.27.1 --no-dependencies --upgrade --force-reinstall
+        pip install urllib3==1.26.9 --no-dependencies --upgrade --force-reinstall
+        pip install waitress==2.1.2 --no-dependencies --upgrade --force-reinstall
+        pip install Werkzeug==1.0.1 --no-dependencies --upgrade --force-reinstall
+        pip install zipp==3.8.0 --no-dependencies --upgrade --force-reinstall 
         pip install termsteel -y
-        if [ -f requirements.txt ]; then pip install -r requirements.txt --upgrade --force-reinstall; fi
-    - name: Test 
+    - name: Final with run
       run: |
         termsteel
