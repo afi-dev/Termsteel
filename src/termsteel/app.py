@@ -67,7 +67,7 @@ try:
     latestversion = re.sub(r"\s+", "", requests.get("https://raw.githubusercontent.com/afi-dev/Termsteel/main/VERSION").text)
 except:
     print("Failed to fetch latest version from github raw")
-    latest = True
+    latest = False
 
 if __version__ == latestversion:
     latest = True
