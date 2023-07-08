@@ -3,7 +3,7 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_logo.png" style="max-width: 100%;"></p>
 
-<p align="center">⚠️ This project is currently not maintained, it's just a demonstration project</h1>
+<p align="center">⚠️ This project is currently not maintained, it's just a demonstration project, actually i work on newer version on AdonisJS/JS Backend</h1>
 <br>
 <p align="center"><b>🙃 Termsteel is a 🇫🇷 French project. </b></p>
 
