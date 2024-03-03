@@ -1,7 +1,6 @@
 # Termsteel
 
-
-<p align="center"><img src="https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_logo.png" style="max-width: 100%;"></p>
+<p align="center"><img src="[https://raw.githubusercontent.com/afi-dev/Termsteel/main/.github/assets/termsteel_logo.png](https://github.com/afi-dev/Termsteel/assets/44731817/e40c7ad9-a784-41ce-a753-4c9889557b17)" style="max-width: 100%;"></p>
 
 <p align="center">⚠️ This project is currently not maintained, it's just a demonstration project, actually i work on newer version on AdonisJS/JS Backend</h1>
 <br>
