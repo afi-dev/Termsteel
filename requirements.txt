@@ -22,5 +22,5 @@ python-socketio==5.4.0
 requests==2.27.1
 urllib3==1.26.9
 waitress==2.1.2
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 zipp==3.8.0
